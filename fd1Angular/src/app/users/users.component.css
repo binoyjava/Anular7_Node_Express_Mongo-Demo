@@ -1,0 +1,53 @@
+.wrapper {
+    background-color: whitesmoke;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 3px;
+  }
+  .form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
+  }
+  .form-row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+  }
+  .form-row > input {
+    flex: 6;
+  }
+  .form-row > input,
+  .form-row > button {
+    padding: .5em;
+  }
+  .form-row > button {
+   border: 0;
+  }
+  table {
+    width: 100%;
+  }
+  .tablebox{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+  }
+  .text-danger{
+    color: red;
+  }
+.mat-column-name{
+   width: 50%;
+ }
+ .mat-column-age{
+  width: 20%;
+}
+ .mat-column-delete{
+  width: 10%;
+  text-align: center;
+}
+.mat-column-edit{
+  width: 10%;
+  text-align: center;
+}
+.mat-header-row{
+  background-color: rgba(148, 177, 248, 0.51);
+}

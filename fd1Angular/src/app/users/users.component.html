@@ -1,0 +1,33 @@
+<div class="tablebox">
+    <button mat-raised-button color="primary" class="createButton" (click)="openDialogForAdd()">Create New User</button>
+    <hr>
+    <table mat-table [(dataSource)]="users" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> <h2>Name</h2> </th>
+        <td mat-cell *matCellDef="let user"> {{user.name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef> <h2>AGE </h2></th>
+        <td mat-cell *matCellDef="let user"> {{user.age}} </td>
+      </ng-container>
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef><h2> ADDRESS </h2></th>
+        <td mat-cell *matCellDef="let user"> {{user.address}} </td>
+      </ng-container>
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef> <h2>EDIT</h2> </th>
+        <td mat-cell *matCellDef="let user">
+          <button mat-button><mat-icon (click)="openDialogForEdit(user)" color="primary">edit</mat-icon></button>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef><h2> DELETE</h2> </th>
+        <td mat-cell *matCellDef="let user">
+          <button mat-button> <mat-icon (click)="deleteUser(user)" color="warn">delete_forever</mat-icon></button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <br>
+  </div>
